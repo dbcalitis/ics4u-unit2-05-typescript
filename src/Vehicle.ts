@@ -12,10 +12,12 @@ class Vehicle {
   private readonly maxSpeed: number
   private speed = 0
 
-  constructor(colour: string,
+  constructor(
+    colour: string,
     licensePlate: string,
     numDoors: number,
-    maxSpeed: number) {
+    maxSpeed: number
+  ) {
     this.licensePlate = licensePlate
     this.colour = colour
     this.numDoors = numDoors
@@ -60,7 +62,7 @@ class Vehicle {
 
   // accelerate() - increases the speed over a period of time.
   accelerate(accelerationPower: number, accelerationTime: number): void {
-    this.speed = (accelerationPower * accelerationTime) + this.speed
+    this.speed = accelerationPower * accelerationTime + this.speed
 
     if (this.speed > this.maxSpeed) {
       this.speed = this.maxSpeed
@@ -69,7 +71,7 @@ class Vehicle {
 
   // break() - decreases the speed over a period of time.
   break(breakPower: number, breakTime: number): void {
-    this.speed = this.speed - (breakPower * breakTime)
+    this.speed = this.speed - breakPower * breakTime
 
     if (this.speed < 0) {
       this.speed = 0
