@@ -27,8 +27,7 @@ class Vehicle {
   // getters and setters
   status(): void {
     console.log(
-      `Status:
-        --> Speed: ${this.speed}
+`        --> Speed: ${this.speed}
         --> MaxSpeed: ${this.maxSpeed}
         --> Number of doors: ${this.numDoors}
         --> License Plate: ${this.licensePlate}
